@@ -73,6 +73,25 @@ The following links may be useful to anyone migrating from VSS and/or to Git. If
 
 ## Release Notes ##
 
+**1.1.0 (12 Dec 2015)**
+
+New features and improvements:
+ * Continue Sync support (Git only)
+ * Performance improvements
+ * Added support for username and email mapping
+ * Added support for dumping all known usernames to a file
+ * The default commit message is empty (from Remigius Stalder)
+ * SVN support (from Remigius Stalder)
+ 
+Bug fixes:
+ * Repeated add/delete of a folder with a different case
+ * Forcibly delete staged changes (add/rename/delete in a single changeset)
+ * Cygwin git compatibility (use forward slashes)
+ * Handle empty commit message properly (from Remigius Stalder)
+ * MoveTo/MoveFrom fixes (from Remigius Stalder)
+ * Properly sort out-of-order revisions (from Remigius Stalder)
+ * Fix exception when dealing with deleted project (from matthew)
+ 
 **1.0.10 (6 Sep 2010)**
 
 Bug fixes based on patches from Matthias Luescher:

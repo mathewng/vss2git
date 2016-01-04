@@ -37,11 +37,14 @@ namespace Hpdi.Vss2Git
             var process = e as ProcessException;
             if (process != null)
             {
-                return string.Format("{0}\nExecutable: {1}\nArguments: {2}",
-                    message, process.Executable, process.Arguments);
+                if (process.Executable != null)
+                    return string.Format("{0}\nExecutable: {1}\nArguments: {2}",
+                        message, process.Executable, process.Arguments);
+                else
+                    return message;
             }
 
-            return message;
+            return message + "\n\n" + e.StackTrace;
         }
     }
 }
